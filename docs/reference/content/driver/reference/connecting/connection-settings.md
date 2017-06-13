@@ -19,11 +19,18 @@ connection. . A connection string mostly follows [RFC 3986](http://tools.ietf.or
  For MongoDB, it is possible to list multiple domain names separated by a comma. Below are some example connection strings.
 
 
-- For a standalone mongod, mongos, or a direct connection to a member of a replica set:
+- For a standalone mongod, mongos, or a direct connection to a member of a replica set (for special operations):
 
 	```ini
 	mongodb://host:27017
 	```
+
+- For a replica set:
+
+	```ini
+	mongodb://host1:27017,host2:27017?replicaSet=rsName
+	```
+
 
 - To connect to multiple mongos or a replica set:
 
